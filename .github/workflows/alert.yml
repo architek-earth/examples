@@ -1,0 +1,27 @@
+name: alert
+on:
+  issues:
+    types: [opened]
+  discussion:
+    types: [created]
+permissions: {}
+jobs:
+  telegram:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send to Telegram
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+          REPO: ${{ github.repository }}
+          KIND: ${{ github.event_name }}
+          NUM: ${{ github.event.issue.number || github.event.discussion.number }}
+          TITLE: ${{ github.event.issue.title || github.event.discussion.title }}
+          URL: ${{ github.event.issue.html_url || github.event.discussion.html_url }}
+          WHO: ${{ github.event.sender.login }}
+        run: |
+          [ -n "$TOKEN" ] || { echo "no Telegram secret"; exit 1; }
+          text=$(printf '⚠️ ISSUE\n%s · %s #%s by %s\n%s\n%s' "$REPO" "$KIND" "$NUM" "$WHO" "$TITLE" "$URL")
+          curl -fsS -o /dev/null "https://api.telegram.org/bot${TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${CHAT}" --data-urlencode "text=${text}" \
+            --data-urlencode "disable_web_page_preview=true"
