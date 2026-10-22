@@ -170,7 +170,10 @@ The node returns one n8n item per dataset row.
 
 
 def main() -> None:
-    items = sorted(get(f"store?username={USER}&limit=200")["items"], key=lambda a: a["name"])
+    # Deprecated actors stay on Apify for existing users but get no examples folder.
+    items = sorted((a for a in get(f"store?username={USER}&limit=200")["items"]
+                    if not a.get("isDeprecated") and not get(f"acts/{USER}~{a['name']}").get("isDeprecated")),
+                   key=lambda a: a["name"])
     live = set()
     rows = []
     for a in items:
