@@ -1,4 +1,4 @@
-# Sainsbury's UK Scraper
+# Sainsbury's Scraper
 
 How to call [architekture/sainsburys-uk-scraper](https://apify.com/architekture/sainsburys-uk-scraper) with the example input from its listing and read the results.
 For what it returns, the fields and pricing, see the [listing](https://apify.com/architekture/sainsburys-uk-scraper).

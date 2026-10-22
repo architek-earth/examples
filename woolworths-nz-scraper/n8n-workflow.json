@@ -1,5 +1,5 @@
 {
-  "name": "Woolworths NZ Product & Price Scraper (Apify)",
+  "name": "Woolworths NZ Scraper (Apify)",
   "nodes": [
     {
       "parameters": {},

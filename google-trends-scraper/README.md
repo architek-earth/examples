@@ -1,4 +1,4 @@
-# Google Trends Trending Now Scraper
+# Google Trends Scraper
 
 How to call [architekture/google-trends-scraper](https://apify.com/architekture/google-trends-scraper) with the example input from its listing and read the results.
 For what it returns, the fields and pricing, see the [listing](https://apify.com/architekture/google-trends-scraper).

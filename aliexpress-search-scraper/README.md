@@ -1,4 +1,4 @@
-# AliExpress Search Scraper
+# AliExpress Scraper
 
 How to call [architekture/aliexpress-search-scraper](https://apify.com/architekture/aliexpress-search-scraper) with the example input from its listing and read the results.
 For what it returns, the fields and pricing, see the [listing](https://apify.com/architekture/aliexpress-search-scraper).

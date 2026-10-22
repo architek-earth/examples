@@ -1,4 +1,4 @@
-# Pak'nSave NZ Scraper
+# Pak'nSave Scraper
 
 How to call [architekture/paknsave-nz-scraper](https://apify.com/architekture/paknsave-nz-scraper) with the example input from its listing and read the results.
 For what it returns, the fields and pricing, see the [listing](https://apify.com/architekture/paknsave-nz-scraper).

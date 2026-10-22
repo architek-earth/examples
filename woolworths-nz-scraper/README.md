@@ -1,4 +1,4 @@
-# Woolworths NZ Product & Price Scraper
+# Woolworths NZ Scraper
 
 How to call [architekture/woolworths-nz-scraper](https://apify.com/architekture/woolworths-nz-scraper) with the example input from its listing and read the results.
 For what it returns, the fields and pricing, see the [listing](https://apify.com/architekture/woolworths-nz-scraper).

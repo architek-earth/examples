@@ -1,5 +1,5 @@
 {
-  "name": "Shopify Products Scraper (Apify)",
+  "name": "Shopify Scraper (Apify)",
   "nodes": [
     {
       "parameters": {},

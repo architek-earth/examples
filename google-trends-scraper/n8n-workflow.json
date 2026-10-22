@@ -1,5 +1,5 @@
 {
-  "name": "Google Trends Trending Now Scraper (Apify)",
+  "name": "Google Trends Scraper (Apify)",
   "nodes": [
     {
       "parameters": {},
