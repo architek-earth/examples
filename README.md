@@ -18,6 +18,7 @@ All actors are pay per result. Rows with `"recordType": "status"` are free; they
 | [EU E-Invoice Parser](docparser-invoice-json/) | [n8n](docparser-invoice-json/n8n-workflow.json) · [Make](docparser-invoice-json/make-blueprint.json) | [listing](https://apify.com/architekture/docparser-invoice-json) |
 | [Dunnes Stores Scraper](dunnes-ie-scraper/) | [n8n](dunnes-ie-scraper/n8n-workflow.json) · [Make](dunnes-ie-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/dunnes-ie-scraper) |
 | [Google Hotels Scraper](google-hotels-scraper/) | [n8n](google-hotels-scraper/n8n-workflow.json) · [Make](google-hotels-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/google-hotels-scraper) |
+| [Google Jobs Scraper](google-jobs-scraper/) | [n8n](google-jobs-scraper/n8n-workflow.json) · [Make](google-jobs-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/google-jobs-scraper) |
 | [Google Shopping Scraper](google-shopping-scraper/) | [n8n](google-shopping-scraper/n8n-workflow.json) · [Make](google-shopping-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/google-shopping-scraper) |
 | [Google Trends Scraper](google-trends-scraper/) | [n8n](google-trends-scraper/n8n-workflow.json) · [Make](google-trends-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/google-trends-scraper) |
 | [Indeed Scraper](indeed-scraper/) | [n8n](indeed-scraper/n8n-workflow.json) · [Make](indeed-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/indeed-scraper) |
