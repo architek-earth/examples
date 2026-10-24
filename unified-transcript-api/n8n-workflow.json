@@ -1,5 +1,5 @@
 {
-  "name": "YouTube & TikTok Transcript Scraper (Apify)",
+  "name": "Unified Video Transcript API (Apify)",
   "nodes": [
     {
       "parameters": {},

@@ -65,6 +65,13 @@ Import [n8n-workflow.json](n8n-workflow.json) (Workflows → Import from file), 
 Header Auth credential with name `Authorization` and value `Bearer <your token>`.
 The node returns one n8n item per dataset row.
 
+## Make
+
+Create a custom variable `APIFY_TOKEN` with your token (Organization → Variables), then create a new scenario and
+import [make-blueprint.json](make-blueprint.json) (⋯ → Import Blueprint). The **HTTP** module sends
+`Authorization: Bearer {{var.organization.APIFY_TOKEN}}` and returns the dataset rows as one parsed array.
+On a plan without custom variables, replace that header value with your token inside Make; never commit it.
+
 ## Input used
 
 ```json

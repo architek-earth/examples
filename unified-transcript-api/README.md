@@ -1,4 +1,4 @@
-# YouTube & TikTok Transcript Scraper
+# Unified Video Transcript API
 
 How to call [architekture/unified-transcript-api](https://apify.com/architekture/unified-transcript-api) with the example input from its listing and read the results.
 For what it returns, the fields and pricing, see the [listing](https://apify.com/architekture/unified-transcript-api).
@@ -88,6 +88,13 @@ curl -sS -X POST "https://api.apify.com/v2/acts/architekture~unified-transcript-
 Import [n8n-workflow.json](n8n-workflow.json) (Workflows → Import from file), then on the **Run actor** node create a
 Header Auth credential with name `Authorization` and value `Bearer <your token>`.
 The node returns one n8n item per dataset row.
+
+## Make
+
+Create a custom variable `APIFY_TOKEN` with your token (Organization → Variables), then create a new scenario and
+import [make-blueprint.json](make-blueprint.json) (⋯ → Import Blueprint). The **HTTP** module sends
+`Authorization: Bearer {{var.organization.APIFY_TOKEN}}` and returns the dataset rows as one parsed array.
+On a plan without custom variables, replace that header value with your token inside Make; never commit it.
 
 ## Input used
 

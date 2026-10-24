@@ -1,7 +1,9 @@
 """Regenerate one folder per live actor from the public Apify Store and each actor's public input schema.
 
 Each folder shows how to call the actor with its listing's example input and read the dataset:
-Python, Node, curl and an importable n8n workflow. Usage: python scripts/generate.py
+Python, Node, curl, an importable n8n workflow and an importable Make scenario blueprint.
+No file ever contains a token: n8n reads it from a Header Auth credential, Make from a custom variable.
+Usage: python scripts/generate.py
 """
 
 import json
@@ -127,6 +129,61 @@ def n8n_workflow(actor: str, name: str, inp: dict) -> dict:
     }
 
 
+def make_blueprint(actor: str, name: str, inp: dict) -> dict:
+    """Make (make.com) scenario blueprint: one HTTP "Make a request" module; token from the APIFY_TOKEN custom variable."""
+    url = f"https://api.apify.com/v2/acts/{actor.replace('/', '~')}/run-sync-get-dataset-items"
+    return {
+        "name": f"{name} (Apify)",
+        "flow": [
+            {
+                "id": 1,
+                "module": "http:ActionSendData",
+                "version": 3,
+                "parameters": {"handleErrors": True, "useNewZLibDeCompress": True},
+                "mapper": {
+                    "url": url,
+                    "serializeUrl": False,
+                    "method": "post",
+                    "headers": [{"name": "Authorization", "value": "Bearer {{var.organization.APIFY_TOKEN}}"}],
+                    "qs": [],
+                    "bodyType": "raw",
+                    "contentType": "application/json",
+                    "data": json.dumps(inp, indent=2, ensure_ascii=False),
+                    "parseResponse": True,
+                    "timeout": "300",
+                    "shareCookies": False,
+                    "rejectUnauthorized": True,
+                    "followRedirect": True,
+                    "useQuerystring": False,
+                    "gzip": True,
+                    "useMtls": False,
+                    "followAllRedirects": False,
+                },
+                "metadata": {"designer": {"x": 0, "y": 0}},
+            }
+        ],
+        "metadata": {
+            "instant": False,
+            "version": 1,
+            "scenario": {"roundtrips": 1, "maxErrors": 3, "autoCommit": True, "autoCommitTriggerLast": True,
+                         "sequential": False, "confidential": False, "dataloss": False, "dlq": False,
+                         "freshVariables": False},
+            "designer": {"orphans": []},
+        },
+    }
+
+
+TOKEN_RE = re.compile(r"apify_api_[A-Za-z0-9]{10,}|Bearer\s+(?!\{\{)[A-Za-z0-9_\-]{20,}")
+
+
+def check_template(path: pathlib.Path) -> None:
+    """Every template must parse as JSON and carry no token."""
+    text = path.read_text(encoding="utf-8")
+    json.loads(text)
+    if TOKEN_RE.search(text):
+        raise SystemExit(f"token-like string in {path}")
+
+
 def readme(a: dict, actor: str, inp: dict) -> str:
     name = title(a)
     return f'''# {name}
@@ -161,6 +218,13 @@ Import [n8n-workflow.json](n8n-workflow.json) (Workflows → Import from file), 
 Header Auth credential with name `Authorization` and value `Bearer <your token>`.
 The node returns one n8n item per dataset row.
 
+## Make
+
+Create a custom variable `APIFY_TOKEN` with your token (Organization → Variables), then create a new scenario and
+import [make-blueprint.json](make-blueprint.json) (⋯ → Import Blueprint). The **HTTP** module sends
+`Authorization: Bearer {{{{var.organization.APIFY_TOKEN}}}}` and returns the dataset rows as one parsed array.
+On a plan without custom variables, replace that header value with your token inside Make; never commit it.
+
 ## Input used
 
 ```json
@@ -183,10 +247,13 @@ def main() -> None:
         folder = ROOT / slug
         folder.mkdir(exist_ok=True)
         (folder / "README.md").write_text(readme(a, actor, inp), encoding="utf-8", newline="\n")
-        (folder / "n8n-workflow.json").write_text(
-            json.dumps(n8n_workflow(actor, title(a), inp), indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+        for fname, doc in (("n8n-workflow.json", n8n_workflow(actor, title(a), inp)),
+                           ("make-blueprint.json", make_blueprint(actor, title(a), inp))):
+            (folder / fname).write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+            check_template(folder / fname)
         live.add(slug)
-        rows.append(f"| [{title(a)}]({slug}/) | [listing](https://apify.com/{actor}) |")
+        rows.append(f"| [{title(a)}]({slug}/) | [n8n]({slug}/n8n-workflow.json) · [Make]({slug}/make-blueprint.json) "
+                    f"| [listing](https://apify.com/{actor}) |")
     # Folders for actors that left the store are removed.
     for d in ROOT.iterdir():
         if d.is_dir() and (d / "n8n-workflow.json").exists() and d.name not in live:
@@ -195,9 +262,9 @@ def main() -> None:
     text = index.read_text(encoding="utf-8")
     head, rest = text.split(START, 1)
     _, tail = rest.split(END, 1)
-    table = "\n".join(["| Actor | Apify |", "|---|---|", *rows])
+    table = "\n".join(["| Actor | Templates | Apify |", "|---|---|---|", *rows])
     index.write_text(f"{head}{START}\n{table}\n{END}{tail}", encoding="utf-8", newline="\n")
-    print(f"{len(live)} actors")
+    print(f"{len(live)} actors, {2 * len(live)} templates (n8n + Make)")
 
 
 if __name__ == "__main__":
