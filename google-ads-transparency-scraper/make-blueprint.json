@@ -22,7 +22,7 @@
         "qs": [],
         "bodyType": "raw",
         "contentType": "application/json",
-        "data": "{\n  \"targets\": [\n    \"AR16735076323512287233\"\n  ],\n  \"region\": \"US\",\n  \"format\": \"text\",\n  \"maxItems\": 3,\n  \"maxResultsPerTarget\": 3\n}",
+        "data": "{\n  \"targets\": [\n    \"AR16735076323512287233\"\n  ],\n  \"format\": \"text\",\n  \"maxItems\": 3,\n  \"maxResultsPerTarget\": 3\n}",
         "parseResponse": true,
         "timeout": "300",
         "shareCookies": false,

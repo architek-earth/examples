@@ -20,7 +20,7 @@
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "{\n  \"targets\": [\n    \"AR16735076323512287233\"\n  ],\n  \"region\": \"US\",\n  \"format\": \"text\",\n  \"maxItems\": 3,\n  \"maxResultsPerTarget\": 3\n}",
+        "jsonBody": "{\n  \"targets\": [\n    \"AR16735076323512287233\"\n  ],\n  \"format\": \"text\",\n  \"maxItems\": 3,\n  \"maxResultsPerTarget\": 3\n}",
         "options": {
           "timeout": 300000
         }

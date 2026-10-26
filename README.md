@@ -17,6 +17,7 @@ All actors are pay per result. Rows with `"recordType": "status"` are free; they
 | [Coles Scraper](coles-au-product-scraper/) | [n8n](coles-au-product-scraper/n8n-workflow.json) · [Make](coles-au-product-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/coles-au-product-scraper) |
 | [EU E-Invoice Parser](docparser-invoice-json/) | [n8n](docparser-invoice-json/n8n-workflow.json) · [Make](docparser-invoice-json/make-blueprint.json) | [listing](https://apify.com/architekture/docparser-invoice-json) |
 | [Dunnes Stores Scraper](dunnes-ie-scraper/) | [n8n](dunnes-ie-scraper/n8n-workflow.json) · [Make](dunnes-ie-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/dunnes-ie-scraper) |
+| [Google Ads Transparency Scraper](google-ads-transparency-scraper/) | [n8n](google-ads-transparency-scraper/n8n-workflow.json) · [Make](google-ads-transparency-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/google-ads-transparency-scraper) |
 | [Google Hotels Scraper](google-hotels-scraper/) | [n8n](google-hotels-scraper/n8n-workflow.json) · [Make](google-hotels-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/google-hotels-scraper) |
 | [Google Jobs Scraper](google-jobs-scraper/) | [n8n](google-jobs-scraper/n8n-workflow.json) · [Make](google-jobs-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/google-jobs-scraper) |
 | [Google Shopping Scraper](google-shopping-scraper/) | [n8n](google-shopping-scraper/n8n-workflow.json) · [Make](google-shopping-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/google-shopping-scraper) |
@@ -30,6 +31,7 @@ All actors are pay per result. Rows with `"recordType": "status"` are free; they
 | [Shopify Scraper](shopify-products-scraper/) | [n8n](shopify-products-scraper/n8n-workflow.json) · [Make](shopify-products-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/shopify-products-scraper) |
 | [Substack Scraper](substack-scraper/) | [n8n](substack-scraper/n8n-workflow.json) · [Make](substack-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/substack-scraper) |
 | [Tennis Scraper](tennis-data-scraper/) | [n8n](tennis-data-scraper/n8n-workflow.json) · [Make](tennis-data-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/tennis-data-scraper) |
+| [Tennis Odds Scraper](tennis-odds-scraper/) | [n8n](tennis-odds-scraper/n8n-workflow.json) · [Make](tennis-odds-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/tennis-odds-scraper) |
 | [Tesco UK Scraper](tesco-uk-scraper/) | [n8n](tesco-uk-scraper/n8n-workflow.json) · [Make](tesco-uk-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/tesco-uk-scraper) |
 | [Threads Replies Scraper](threads-replies-scraper/) | [n8n](threads-replies-scraper/n8n-workflow.json) · [Make](threads-replies-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/threads-replies-scraper) |
 | [TikTok Shop Scraper](tiktok-shop-products-scraper/) | [n8n](tiktok-shop-products-scraper/n8n-workflow.json) · [Make](tiktok-shop-products-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/tiktok-shop-products-scraper) |
@@ -37,6 +39,7 @@ All actors are pay per result. Rows with `"recordType": "status"` are free; they
 | [Woolworths AU Scraper](woolworths-au-product-scraper/) | [n8n](woolworths-au-product-scraper/n8n-workflow.json) · [Make](woolworths-au-product-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/woolworths-au-product-scraper) |
 | [Woolworths NZ Scraper](woolworths-nz-scraper/) | [n8n](woolworths-nz-scraper/n8n-workflow.json) · [Make](woolworths-nz-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/woolworths-nz-scraper) |
 | [Y Combinator Scraper](yc-companies-scraper/) | [n8n](yc-companies-scraper/n8n-workflow.json) · [Make](yc-companies-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/yc-companies-scraper) |
+| [Yelp Scraper](yelp-scraper/) | [n8n](yelp-scraper/n8n-workflow.json) · [Make](yelp-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/yelp-scraper) |
 | [YouTube Transcript Scraper](youtube-transcript-scraper/) | [n8n](youtube-transcript-scraper/n8n-workflow.json) · [Make](youtube-transcript-scraper/make-blueprint.json) | [listing](https://apify.com/architekture/youtube-transcript-scraper) |
 <!-- actors:end -->
 
