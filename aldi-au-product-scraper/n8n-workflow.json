@@ -1,46 +1,47 @@
 {
-  "name": "ALDI AU Scraper (Apify)",
+  "name": "ALDI AU: bounded collection",
+  "active": false,
   "nodes": [
     {
-      "parameters": {},
-      "name": "Start",
+      "id": "start",
+      "name": "Run manually",
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
         0,
         0
       ],
-      "id": "a1b2c3d4-0000-4000-8000-000000000001"
+      "parameters": {}
     },
     {
-      "parameters": {
-        "method": "POST",
-        "url": "https://api.apify.com/v2/acts/architekture~aldi-au-product-scraper/run-sync-get-dataset-items",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "specifyBody": "json",
-        "jsonBody": "{\n  \"searchTerms\": [\n    \"milk\"\n  ],\n  \"maxItemsPerQuery\": 10,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true\n  }\n}",
-        "options": {
-          "timeout": 300000
-        }
-      },
-      "name": "Run actor",
+      "id": "collect",
+      "name": "Collect rows",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
         240,
         0
       ],
-      "id": "a1b2c3d4-0000-4000-8000-000000000002"
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/architekture~aldi-au-product-scraper/run-sync-get-dataset-items?timeout=120&memory=2048&maxTotalChargeUsd=0.05",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"includeDetails\": false,\n  \"maxItemsPerQuery\": 1,\n  \"preview\": true,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true\n  },\n  \"searchTerms\": [\n    \"milk\"\n  ]\n}",
+        "options": {
+          "timeout": 150000
+        }
+      }
     }
   ],
   "connections": {
-    "Start": {
+    "Run manually": {
       "main": [
         [
           {
-            "node": "Run actor",
+            "node": "Collect rows",
             "type": "main",
             "index": 0
           }
@@ -48,5 +49,7 @@
       ]
     }
   },
-  "settings": {}
+  "settings": {
+    "executionOrder": "v1"
+  }
 }

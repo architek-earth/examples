@@ -1,0 +1,55 @@
+{
+  "name": "SuperValue NZ: bounded collection",
+  "active": false,
+  "nodes": [
+    {
+      "id": "start",
+      "name": "Run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "collect",
+      "name": "Collect rows",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/architekture~supervalue-nz-scraper/run-sync-get-dataset-items?timeout=120&memory=2048&maxTotalChargeUsd=0.1780000",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"searchTerms\": [\n    \"milk\"\n  ],\n  \"maxItemsPerQuery\": 1,\n  \"storeId\": \"milton\",\n  \"preview\": true,\n  \"continuePreviousRun\": false\n}",
+        "options": {
+          "timeout": 150000
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Run manually": {
+      "main": [
+        [
+          {
+            "node": "Collect rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
