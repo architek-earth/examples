@@ -51,7 +51,7 @@ Something wrong with an example or an actor? [Open an issue](https://github.com/
 
 ## M-058 bounded examples, 2026-11-16
 
-Prepared for the launch candidates. Use after the corresponding actor release is approved. Every workflow is inactive; no embedded credentials or automatic retries.
+Revised for 24 launch candidates and four public examples per actor. Google Play retains the independently approved $0.02/$0.08 pricing. Use after the corresponding actor release is approved. Every workflow is inactive and contains no credentials or automatic retries.
 
 | Actor | Python | n8n |
 |---|---|---|
@@ -61,7 +61,6 @@ Prepared for the launch candidates. Use after the corresponding actor release is
 | foursquare-nz-scraper | [Python](foursquare-nz-scraper/example.py) | [n8n](foursquare-nz-scraper/n8n-workflow.json) |
 | freshchoice-nz-scraper | [Python](freshchoice-nz-scraper/example.py) | [n8n](freshchoice-nz-scraper/n8n-workflow.json) |
 | google-hotels-scraper | [Python](google-hotels-scraper/example.py) | [n8n](google-hotels-scraper/n8n-workflow.json) |
-| google-play-reviews-scraper | [Python](google-play-reviews-scraper/example.py) | [n8n](google-play-reviews-scraper/n8n-workflow.json) |
 | google-shopping-scraper | [Python](google-shopping-scraper/example.py) | [n8n](google-shopping-scraper/n8n-workflow.json) |
 | google-trends-scraper | [Python](google-trends-scraper/example.py) | [n8n](google-trends-scraper/n8n-workflow.json) |
 | indeed-scraper | [Python](indeed-scraper/example.py) | [n8n](indeed-scraper/n8n-workflow.json) |
@@ -76,3 +75,7 @@ Prepared for the launch candidates. Use after the corresponding actor release is
 | woolworths-nz-scraper | [Python](woolworths-nz-scraper/example.py) | [n8n](woolworths-nz-scraper/n8n-workflow.json) |
 | yc-companies-scraper | [Python](yc-companies-scraper/example.py) | [n8n](yc-companies-scraper/n8n-workflow.json) |
 | youtube-metadata-scraper | [Python](youtube-metadata-scraper/example.py) | [n8n](youtube-metadata-scraper/n8n-workflow.json) |
+| youtube-transcript-scraper | [Python](youtube-transcript-scraper/example.py) | [n8n](youtube-transcript-scraper/n8n-workflow.json) |
+| linkedin-jobs-monitor | [Python](linkedin-jobs-monitor/example.py) | [n8n](linkedin-jobs-monitor/n8n-workflow.json) |
+| google-ads-transparency-scraper | [Python](google-ads-transparency-scraper/example.py) | [n8n](google-ads-transparency-scraper/n8n-workflow.json) |
+| google-play-reviews-scraper | [Python](google-play-reviews-scraper/example.py) | [n8n](google-play-reviews-scraper/n8n-workflow.json) |
