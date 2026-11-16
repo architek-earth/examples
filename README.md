@@ -55,3 +55,34 @@ Folders are regenerated weekly from the public Apify listings.
 ## Help
 
 Something wrong with an example or an actor? [Open an issue](https://github.com/architek-earth/examples/issues/new) or email [north@architek.earth](mailto:north@architek.earth).
+
+## M-058 bounded examples, 2026-11-16
+
+Revised for 24 launch candidates and four public examples per actor. Google Play retains the independently approved $0.02/$0.08 pricing. Use after the corresponding actor release is approved. Every workflow is inactive and contains no credentials or automatic retries.
+
+| Actor | Python | n8n |
+|---|---|---|
+| aldi-au-product-scraper | [Python](aldi-au-product-scraper/example.py) | [n8n](aldi-au-product-scraper/n8n-workflow.json) |
+| aliexpress-search-scraper | [Python](aliexpress-search-scraper/example.py) | [n8n](aliexpress-search-scraper/n8n-workflow.json) |
+| coles-au-product-scraper | [Python](coles-au-product-scraper/example.py) | [n8n](coles-au-product-scraper/n8n-workflow.json) |
+| foursquare-nz-scraper | [Python](foursquare-nz-scraper/example.py) | [n8n](foursquare-nz-scraper/n8n-workflow.json) |
+| freshchoice-nz-scraper | [Python](freshchoice-nz-scraper/example.py) | [n8n](freshchoice-nz-scraper/n8n-workflow.json) |
+| google-hotels-scraper | [Python](google-hotels-scraper/example.py) | [n8n](google-hotels-scraper/n8n-workflow.json) |
+| google-shopping-scraper | [Python](google-shopping-scraper/example.py) | [n8n](google-shopping-scraper/n8n-workflow.json) |
+| google-trends-scraper | [Python](google-trends-scraper/example.py) | [n8n](google-trends-scraper/n8n-workflow.json) |
+| indeed-scraper | [Python](indeed-scraper/example.py) | [n8n](indeed-scraper/n8n-workflow.json) |
+| new-world-nz-scraper | [Python](new-world-nz-scraper/example.py) | [n8n](new-world-nz-scraper/n8n-workflow.json) |
+| paknsave-nz-scraper | [Python](paknsave-nz-scraper/example.py) | [n8n](paknsave-nz-scraper/n8n-workflow.json) |
+| supervalue-nz-scraper | [Python](supervalue-nz-scraper/example.py) | [n8n](supervalue-nz-scraper/n8n-workflow.json) |
+| tennis-odds-scraper | [Python](tennis-odds-scraper/example.py) | [n8n](tennis-odds-scraper/n8n-workflow.json) |
+| threads-replies-scraper | [Python](threads-replies-scraper/example.py) | [n8n](threads-replies-scraper/n8n-workflow.json) |
+| tiktok-shop-products-scraper | [Python](tiktok-shop-products-scraper/example.py) | [n8n](tiktok-shop-products-scraper/n8n-workflow.json) |
+| unified-transcript-api | [Python](unified-transcript-api/example.py) | [n8n](unified-transcript-api/n8n-workflow.json) |
+| woolworths-au-product-scraper | [Python](woolworths-au-product-scraper/example.py) | [n8n](woolworths-au-product-scraper/n8n-workflow.json) |
+| woolworths-nz-scraper | [Python](woolworths-nz-scraper/example.py) | [n8n](woolworths-nz-scraper/n8n-workflow.json) |
+| yc-companies-scraper | [Python](yc-companies-scraper/example.py) | [n8n](yc-companies-scraper/n8n-workflow.json) |
+| youtube-metadata-scraper | [Python](youtube-metadata-scraper/example.py) | [n8n](youtube-metadata-scraper/n8n-workflow.json) |
+| youtube-transcript-scraper | [Python](youtube-transcript-scraper/example.py) | [n8n](youtube-transcript-scraper/n8n-workflow.json) |
+| linkedin-jobs-monitor | [Python](linkedin-jobs-monitor/example.py) | [n8n](linkedin-jobs-monitor/n8n-workflow.json) |
+| google-ads-transparency-scraper | [Python](google-ads-transparency-scraper/example.py) | [n8n](google-ads-transparency-scraper/n8n-workflow.json) |
+| google-play-reviews-scraper | [Python](google-play-reviews-scraper/example.py) | [n8n](google-play-reviews-scraper/n8n-workflow.json) |
