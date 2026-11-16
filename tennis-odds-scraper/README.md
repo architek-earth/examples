@@ -14,6 +14,7 @@ from apify_client import ApifyClient  # pip install apify-client
 
 client = ApifyClient(os.environ["APIFY_TOKEN"])
 run_input = {
+    "preview": True,
     "books": [
         "pinnacle",
         "kambi"
@@ -37,6 +38,7 @@ import { ApifyClient } from "apify-client";
 
 const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
 const input = {
+    "preview": true,
     "books": [
         "pinnacle",
         "kambi"
@@ -60,6 +62,7 @@ curl -sS -X POST "https://api.apify.com/v2/acts/architekture~tennis-odds-scraper
   -H "Authorization: Bearer $APIFY_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
+  "preview": true,
   "books": [
     "pinnacle",
     "kambi"
@@ -85,6 +88,7 @@ On a plan without custom variables, replace that header value with your token in
 
 ```json
 {
+  "preview": true,
   "books": [
     "pinnacle",
     "kambi"

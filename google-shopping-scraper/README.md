@@ -14,6 +14,7 @@ from apify_client import ApifyClient  # pip install apify-client
 
 client = ApifyClient(os.environ["APIFY_TOKEN"])
 run_input = {
+    "preview": True,
     "queries": [
         "sony wh-1000xm5"
     ],
@@ -36,6 +37,7 @@ import { ApifyClient } from "apify-client";
 
 const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
 const input = {
+    "preview": true,
     "queries": [
         "sony wh-1000xm5"
     ],
@@ -58,6 +60,7 @@ curl -sS -X POST "https://api.apify.com/v2/acts/architekture~google-shopping-scr
   -H "Authorization: Bearer $APIFY_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
+  "preview": true,
   "queries": [
     "sony wh-1000xm5"
   ],
@@ -82,6 +85,7 @@ On a plan without custom variables, replace that header value with your token in
 
 ```json
 {
+  "preview": true,
   "queries": [
     "sony wh-1000xm5"
   ],

@@ -22,6 +22,7 @@ run_input = {
         "New World Queenstown"
     ],
     "maxItemsPerQuery": 20,
+    "preview": True,
     "proxyConfiguration": {
         "useApifyProxy": True,
         "apifyProxyGroups": [
@@ -55,6 +56,7 @@ const input = {
         "New World Queenstown"
     ],
     "maxItemsPerQuery": 20,
+    "preview": true,
     "proxyConfiguration": {
         "useApifyProxy": true,
         "apifyProxyGroups": [
@@ -88,6 +90,7 @@ curl -sS -X POST "https://api.apify.com/v2/acts/architekture~new-world-nz-scrape
     "New World Queenstown"
   ],
   "maxItemsPerQuery": 20,
+  "preview": true,
   "proxyConfiguration": {
     "useApifyProxy": true,
     "apifyProxyGroups": [
@@ -123,6 +126,7 @@ On a plan without custom variables, replace that header value with your token in
     "New World Queenstown"
   ],
   "maxItemsPerQuery": 20,
+  "preview": true,
   "proxyConfiguration": {
     "useApifyProxy": true,
     "apifyProxyGroups": [

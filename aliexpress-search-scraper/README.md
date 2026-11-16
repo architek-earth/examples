@@ -18,6 +18,7 @@ run_input = {
         "bluetooth earphones"
     ],
     "maxItemsPerQuery": 60,
+    "preview": True,
     "proxyConfiguration": {
         "useApifyProxy": True,
         "apifyProxyCountry": "US"
@@ -44,6 +45,7 @@ const input = {
         "bluetooth earphones"
     ],
     "maxItemsPerQuery": 60,
+    "preview": true,
     "proxyConfiguration": {
         "useApifyProxy": true,
         "apifyProxyCountry": "US"
@@ -70,6 +72,7 @@ curl -sS -X POST "https://api.apify.com/v2/acts/architekture~aliexpress-search-s
     "bluetooth earphones"
   ],
   "maxItemsPerQuery": 60,
+  "preview": true,
   "proxyConfiguration": {
     "useApifyProxy": true,
     "apifyProxyCountry": "US"
@@ -98,6 +101,7 @@ On a plan without custom variables, replace that header value with your token in
     "bluetooth earphones"
   ],
   "maxItemsPerQuery": 60,
+  "preview": true,
   "proxyConfiguration": {
     "useApifyProxy": true,
     "apifyProxyCountry": "US"

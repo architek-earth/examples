@@ -20,7 +20,7 @@
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "{\n  \"books\": [\n    \"pinnacle\",\n    \"kambi\"\n  ],\n  \"maxMatchesPerBook\": 10\n}",
+        "jsonBody": "{\n  \"preview\": true,\n  \"books\": [\n    \"pinnacle\",\n    \"kambi\"\n  ],\n  \"maxMatchesPerBook\": 10\n}",
         "options": {
           "timeout": 300000
         }

@@ -20,7 +20,7 @@
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "{\n  \"searchTerms\": [\n    \"milk\"\n  ],\n  \"maxItemsPerQuery\": 40,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true\n  }\n}",
+        "jsonBody": "{\n  \"searchTerms\": [\n    \"milk\"\n  ],\n  \"maxItemsPerQuery\": 40,\n  \"preview\": true,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true\n  }\n}",
         "options": {
           "timeout": 300000
         }

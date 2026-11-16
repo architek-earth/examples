@@ -20,7 +20,7 @@
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "{\n  \"mode\": \"trending\",\n  \"geo\": \"US\",\n  \"hours\": 24,\n  \"maxItems\": 10,\n  \"billingMode\": \"paid\"\n}",
+        "jsonBody": "{\n  \"mode\": \"trending\",\n  \"geo\": \"US\",\n  \"hours\": 24,\n  \"maxItems\": 10,\n  \"billingMode\": \"preview\"\n}",
         "options": {
           "timeout": 300000
         }

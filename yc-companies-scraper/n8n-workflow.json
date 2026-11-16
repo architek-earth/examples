@@ -20,7 +20,7 @@
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "{\n  \"query\": \"\",\n  \"maxItems\": 10,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true,\n    \"apifyProxyGroups\": []\n  }\n}",
+        "jsonBody": "{\n  \"query\": \"\",\n  \"maxItems\": 10,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true,\n    \"apifyProxyGroups\": []\n  },\n  \"preview\": true\n}",
         "options": {
           "timeout": 300000
         }

@@ -20,7 +20,7 @@
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "{\n  \"queries\": [\n    \"sony wh-1000xm5\"\n  ],\n  \"maxResultsPerQuery\": 10\n}",
+        "jsonBody": "{\n  \"preview\": true,\n  \"queries\": [\n    \"sony wh-1000xm5\"\n  ],\n  \"maxResultsPerQuery\": 10\n}",
         "options": {
           "timeout": 300000
         }

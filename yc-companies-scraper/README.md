@@ -19,7 +19,8 @@ run_input = {
     "proxyConfiguration": {
         "useApifyProxy": True,
         "apifyProxyGroups": []
-    }
+    },
+    "preview": True
 }
 
 run = client.actor("architekture/yc-companies-scraper").call(run_input=run_input)
@@ -43,7 +44,8 @@ const input = {
     "proxyConfiguration": {
         "useApifyProxy": true,
         "apifyProxyGroups": []
-    }
+    },
+    "preview": true
 };
 
 const run = await client.actor("architekture/yc-companies-scraper").call(input);
@@ -67,7 +69,8 @@ curl -sS -X POST "https://api.apify.com/v2/acts/architekture~yc-companies-scrape
   "proxyConfiguration": {
     "useApifyProxy": true,
     "apifyProxyGroups": []
-  }
+  },
+  "preview": true
 }'
 ```
 
@@ -93,6 +96,7 @@ On a plan without custom variables, replace that header value with your token in
   "proxyConfiguration": {
     "useApifyProxy": true,
     "apifyProxyGroups": []
-  }
+  },
+  "preview": true
 }
 ```

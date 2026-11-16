@@ -22,7 +22,7 @@
         "qs": [],
         "bodyType": "raw",
         "contentType": "application/json",
-        "data": "{\n  \"postUrls\": [\n    \"https://www.threads.com/@zuck/post/DeZtp-TkQHh\"\n  ],\n  \"maxRepliesPerPost\": 50,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true\n  }\n}",
+        "data": "{\n  \"preview\": true,\n  \"postUrls\": [\n    \"https://www.threads.com/@zuck/post/DeZtp-TkQHh\"\n  ],\n  \"maxRepliesPerPost\": 50,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true\n  }\n}",
         "parseResponse": true,
         "timeout": "300",
         "shareCookies": false,

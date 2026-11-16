@@ -18,6 +18,7 @@ run_input = {
         "milk"
     ],
     "maxItemsPerQuery": 40,
+    "preview": True,
     "proxyConfiguration": {
         "useApifyProxy": True
     }
@@ -43,6 +44,7 @@ const input = {
         "milk"
     ],
     "maxItemsPerQuery": 40,
+    "preview": true,
     "proxyConfiguration": {
         "useApifyProxy": true
     }
@@ -68,6 +70,7 @@ curl -sS -X POST "https://api.apify.com/v2/acts/architekture~woolworths-nz-scrap
     "milk"
   ],
   "maxItemsPerQuery": 40,
+  "preview": true,
   "proxyConfiguration": {
     "useApifyProxy": true
   }
@@ -95,6 +98,7 @@ On a plan without custom variables, replace that header value with your token in
     "milk"
   ],
   "maxItemsPerQuery": 40,
+  "preview": true,
   "proxyConfiguration": {
     "useApifyProxy": true
   }

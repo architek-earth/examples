@@ -20,7 +20,7 @@
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "{\n  \"searchTerms\": [\n    \"bluetooth earphones\"\n  ],\n  \"maxItemsPerQuery\": 60,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true,\n    \"apifyProxyCountry\": \"US\"\n  }\n}",
+        "jsonBody": "{\n  \"searchTerms\": [\n    \"bluetooth earphones\"\n  ],\n  \"maxItemsPerQuery\": 60,\n  \"preview\": true,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true,\n    \"apifyProxyCountry\": \"US\"\n  }\n}",
         "options": {
           "timeout": 300000
         }

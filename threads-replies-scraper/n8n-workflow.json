@@ -20,7 +20,7 @@
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "{\n  \"postUrls\": [\n    \"https://www.threads.com/@zuck/post/DeZtp-TkQHh\"\n  ],\n  \"maxRepliesPerPost\": 50,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true\n  }\n}",
+        "jsonBody": "{\n  \"preview\": true,\n  \"postUrls\": [\n    \"https://www.threads.com/@zuck/post/DeZtp-TkQHh\"\n  ],\n  \"maxRepliesPerPost\": 50,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true\n  }\n}",
         "options": {
           "timeout": 300000
         }

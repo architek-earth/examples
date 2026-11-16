@@ -14,7 +14,7 @@ from apify_client import ApifyClient  # pip install apify-client
 
 client = ApifyClient(os.environ["APIFY_TOKEN"])
 run_input = {
-    "mode": "paid",
+    "mode": "preview",
     "queries": [
         "London"
     ],
@@ -37,7 +37,7 @@ import { ApifyClient } from "apify-client";
 
 const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
 const input = {
-    "mode": "paid",
+    "mode": "preview",
     "queries": [
         "London"
     ],
@@ -60,7 +60,7 @@ curl -sS -X POST "https://api.apify.com/v2/acts/architekture~google-hotels-scrap
   -H "Authorization: Bearer $APIFY_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
-  "mode": "paid",
+  "mode": "preview",
   "queries": [
     "London"
   ],
@@ -85,7 +85,7 @@ On a plan without custom variables, replace that header value with your token in
 
 ```json
 {
-  "mode": "paid",
+  "mode": "preview",
   "queries": [
     "London"
   ],

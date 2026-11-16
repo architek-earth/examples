@@ -18,7 +18,7 @@ run_input = {
     "geo": "US",
     "hours": 24,
     "maxItems": 10,
-    "billingMode": "paid"
+    "billingMode": "preview"
 }
 
 run = client.actor("architekture/google-trends-scraper").call(run_input=run_input)
@@ -41,7 +41,7 @@ const input = {
     "geo": "US",
     "hours": 24,
     "maxItems": 10,
-    "billingMode": "paid"
+    "billingMode": "preview"
 };
 
 const run = await client.actor("architekture/google-trends-scraper").call(input);
@@ -64,7 +64,7 @@ curl -sS -X POST "https://api.apify.com/v2/acts/architekture~google-trends-scrap
   "geo": "US",
   "hours": 24,
   "maxItems": 10,
-  "billingMode": "paid"
+  "billingMode": "preview"
 }'
 ```
 
@@ -89,6 +89,6 @@ On a plan without custom variables, replace that header value with your token in
   "geo": "US",
   "hours": 24,
   "maxItems": 10,
-  "billingMode": "paid"
+  "billingMode": "preview"
 }
 ```

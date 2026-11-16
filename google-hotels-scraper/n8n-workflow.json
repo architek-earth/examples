@@ -20,7 +20,7 @@
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "{\n  \"mode\": \"paid\",\n  \"queries\": [\n    \"London\"\n  ],\n  \"maxItemsPerQuery\": 10\n}",
+        "jsonBody": "{\n  \"mode\": \"preview\",\n  \"queries\": [\n    \"London\"\n  ],\n  \"maxItemsPerQuery\": 10\n}",
         "options": {
           "timeout": 300000
         }
