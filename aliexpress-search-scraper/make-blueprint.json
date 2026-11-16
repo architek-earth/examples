@@ -22,7 +22,7 @@
         "qs": [],
         "bodyType": "raw",
         "contentType": "application/json",
-        "data": "{\n  \"searchTerms\": [\n    \"bluetooth earphones\"\n  ],\n  \"maxItemsPerQuery\": 60,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true,\n    \"apifyProxyCountry\": \"US\"\n  }\n}",
+        "data": "{\n  \"searchTerms\": [\n    \"bluetooth earphones\"\n  ],\n  \"maxItemsPerQuery\": 60,\n  \"preview\": true,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true,\n    \"apifyProxyCountry\": \"US\"\n  }\n}",
         "parseResponse": true,
         "timeout": "300",
         "shareCookies": false,
